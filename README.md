@@ -1,2 +1,2 @@
-# IXD608_202260
+# WNM608
 Summer IXD608 class
