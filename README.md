@@ -1,2 +1,2 @@
-# aau-wnm608
+# wnm608
 Summer IXD608 class
