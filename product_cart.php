@@ -54,7 +54,7 @@
          &dollar;60.00
     </div>
 </div><div class="display-flex">
-    <div class="flex-none images-plant">
+    <div class="flex-none images-thumbs">
         <img src="img/2.jpg">
     </div>
     <div class="flex-stretch">
@@ -65,7 +65,7 @@
          &dollar;55.00
     </div>
 </div><div class="display-flex">
-    <div class="flex-none images-plant">
+    <div class="flex-none images-thumbs">
         <img src="img/4.jpg">
     </div>
     <div class="flex-stretch">
