@@ -1,3 +1,18 @@
+<?php
+include_once "lib/php/functions.php";
+
+$product = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `id`=".$_GET['id'])[0];
+
+$images = explode(",", $product->images);
+
+
+$image_elements = array_reduce($images,function($r,$o){
+	return $r."<img src='img/$o'>";
+});
+
+// print_p($_SESSION);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,67 +20,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Product Item</title>
 
-	
-<meta name="viewport" content="width=device-width">
+	<?php include "parts/meta.php"; ?>
 
-<base href="http://jessicafranco.co/aau/wnm608/franco.jessica/">
-
-<link rel="stylesheet" href="./lib/css/styleguide.css">
-<link rel="stylesheet" href="./lib/css/gridsystem.css">
-<link rel="stylesheet" href="./css/storetheme.css">
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="js/product_thumbs.js"></script>
 </head>
 <body>
-	
+	<?php include "parts/navbar.php"; ?>
 
-<header class="navbar">
-	<div class="container display-flex">
- 		<div class="flex-none">
-			<h1>Jessica's Indoor Houseplants</h1>
-		</div>
-		<div class="flex-stretch"></div>
-		<nav class="nav nav-flex flex-none">
-			<ul>
-				<!-- li*3>a[href=#]>{Link $} -->
-				<li><a href="index.php">Home</a></li>
-				<li><a href="product_list.php">Shop</a></li>
-				<li><a href="about.php">About</a></li>
-				<li><a href="product_cart.php">
-					<span>Cart</span>
-	    			<span class="badge">(1)</span>
-	    		</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
 <div class="container">
 	<div class="grid gap">
 		<div class=".col-xs-12 col-md-7">
 			<div class="card soft">
 				<div class="images-main">
-				    <img src="img/1.jpg" alt="">
+				    <img src="img/<?= $product->thumbnail?>" alt="">
 			    </div>
 				<div class="images-thumbs">
-					<img src='img/9.jpg'><img src='img/2.jpg'><img src='img/7.jpg'>				</div>
+					<?= $image_elements ?>
+				</div>
 	        </div>
 	    </div>
 
 		
-	    <div class="col-xs-12 col-md-5">
+	    <div class=".col-xs-12 col-md-5">
 	    	<form class="card soft flat" method="post" action="cart_actions.php?action=add-to-cart">
 
-				<input type="hidden" name="product-id" value="2">
+				<input type="hidden" name="product-id" value="<?= $product->id ?>">
 
 	    		<div class="card-section">
-	    		    <h2 class="product-title">plant1</h2>
-	    		     <div class="product-price">&dollar;55.00</div>
+	    		    <h2 class="product-title"><?= $product->name ?></h2>
+	    		    <div class="product-price">&dollar;<?= $product->price ?></div>
 	    	    </div>
 
 
 				<div class="card-section">
-	    	    	<div>
+	    	    	<div class="form-control">
 	    	    	    <label for="product-amount" class="form-label">Amount</label>
 	    	    	    <div class="form-select">
 	    	              <select id="product-amount" name="product-amount">
@@ -83,15 +71,15 @@
 	    	            </div>
 	    	        </div> 
 
-		    	    <div class="form-control">
+		    	    <!-- <div class="form-control">
 		    	        <label for="product-color" class="form-label">Color</label>
 		    	        <div class="form-select">
 		    	    	    <select id="product-color" name="product-color">
-		    	    		    <option>Yellow</option>
-		    	                <option>Pink</option>
+		    	    		    <option>Red</option>
+		    	                <option>Blue</option>
 		    	            </select>
 		    	        </div>
-		    	    </div>
+		    	    </div> -->
 	    	    </div>
 	    	    
 	    	    <div class="card-section">
@@ -101,7 +89,7 @@
 		</div>
 	</div>
 	<div class="card soft light">
-		<p>A fascinating tropical plant.</p>
+		<p><?= $product->description ?></p>
 	</div>
 
 </div>
