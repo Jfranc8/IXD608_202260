@@ -36,7 +36,7 @@ return $r.<<<HTML
         <img src="img/$o->thumbnail">
     </div>
     <div class="flex-stretch">
-        <strong>$o->name ($o->amount)</strong>
+        <strong>$o->name</strong>
         <form action="cart_actions.php?action=delete-cart-item" method="post">
             <input type="hidden" name="id" value="$o->id">
             <input type="submit" class="form-button inline" value="Delete" style="font-size:0.8em">
@@ -46,9 +46,9 @@ return $r.<<<HTML
         <div>&dollar;$totalfixed</div>
         <form action="cart_actions.php?action=update-cart-item" method="post" onchange="this.submit()">
             <input type="hidden" name="id" value="$o->id">
-                <div class="form-select" style="font-size:0.8em">
-                      $selectamount
-                </div>
+            <div class="form-select" style="font-size:0.8em">
+                $selectamount
+            </div>
         </form>
     </div>
 </div>
@@ -82,4 +82,31 @@ return <<<HTML
 </div>
 HTML;
 }
-?>
+
+
+
+
+
+
+
+
+function recommendedProducts($a) {
+$products = array_reduce($a,'productListTemplate');
+echo <<<HTML
+<div class="grid gap productlist">$products</div>
+HTML;
+}
+
+
+function recommendedAnything($limit=3) {
+    $result = makeQuery(makeConn(),"SELECT * FROM `products` ORDER BY rand() LIMIT $limit");
+    recommendedProducts($result);
+}
+function recommendedCategory($cat,$limit=3) {
+    $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `style`='$cat' ORDER BY `date_create` DESC LIMIT $limit");
+    recommendedProducts($result);
+}
+function recommendedSimilar($cat,$id=0,$limit=3) {
+    $result = makeQuery(makeConn(),"SELECT * FROM `products` WHERE `style`='$cat' AND `id`<>$id ORDER BY rand() LIMIT $limit");
+    recommendedProducts($result);
+}
