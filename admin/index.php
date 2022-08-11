@@ -5,9 +5,9 @@ include "../lib/php/functions.php";
 
 $empty_product = (object)[
     "name"=>"Abstract",
-    "price"=>"10.00",
+    "price"=>"60.97",
     "amount"=>"3",
-    "style"=>"shrub",
+    "style"=>"plant",
     "description"=>"Plants are great to incorporate into your home.",
     "thumbnail"=>"1.jpg",
     "images"=>"1.jpg,2.jpg,3.jpg"
