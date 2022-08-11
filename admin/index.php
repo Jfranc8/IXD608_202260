@@ -4,7 +4,7 @@ include "../lib/php/functions.php";
 
 
 $empty_product = (object)[
-    "name"=>"Plant",
+    "name"=>"Tropical plant",
     "price"=>"60.97",
     "amount"=>"3",
     "style"=>"plant",
