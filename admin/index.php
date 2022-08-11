@@ -4,11 +4,11 @@ include "../lib/php/functions.php";
 
 
 $empty_product = (object)[
-    "name"=>"Abstract",
+    "name"=>"Plant",
     "price"=>"60.97",
     "amount"=>"3",
     "style"=>"plant",
-    "description"=>"Plants are great to incorporate into your home.",
+    "description"=>"Bring life into your home.",
     "thumbnail"=>"1.jpg",
     "images"=>"1.jpg,2.jpg,3.jpg"
 ];
