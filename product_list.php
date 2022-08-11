@@ -25,24 +25,29 @@ include_once "parts/templates.php";
 		<h2>Product List</h2>
 
 		<div class="form-control">
-			<form class="hotdog light" id="product-search">
+			<form class="hotdog light" id="product_search">
 				<input type="search" placeholder="Search Products">
 			</form>
 		</div>
 		<div class="form-control">
 			<div class="card soft">
-			<div class="display-flex">
+			<div class="display-flex flex-wrap">
 				<div class="flex-stretch display-flex">
 					<div class="flex-none">
-						<button data-filter="style" data-value="" type="button" class="form-button">All</button>
+						<button data-filter="style" data-value="all" type="button" class="form-button">All</button>
 					</div>
 					<div class="flex-none">
-						<button data-filter="style" data-value="abstract" type="button" class="form-button">Plants</button>
+						<button data-filter="style" data-value="hanging plants" type="button" class="form-button"></button>
 					</div>
 					<div class="flex-none">
-						<button data-filter="style" data-value="modern" type="button" class="form-button">Pet Friendly</button>
+						<button data-filter="style" data-value="pet friendly" type="button" class="form-button">Pet Friendly</button>
 					</div>
-					
+					<div class="flex-none">
+						<button data-filter="style" data-value="tropical plants" type="button" class="form-button">Tropical Plants</button>
+					</div>
+					<div class="flex-none">
+						<button data-filter="style" data-value="floor plants" type="button" class="form-button">Floor Plants</button>
+					</div>
 				</div>
 				<div class="flex-none">
 					<div class="form-select">
