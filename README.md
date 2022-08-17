@@ -11,4 +11,3 @@ Extra Links
 - http://jessicafranco.co/aau/wnm608/franco.jessica/admin/users.php
 - http://jessicafranco.co/aau/wnm608/franco.jessica/notes/
 - http://jessicafranco.co/aau/wnm608/franco.jessica/notes/reading_data.php
-- http://jessicafranco.co/aau/wnm608/franco.jessica/notes/reading_data.php
