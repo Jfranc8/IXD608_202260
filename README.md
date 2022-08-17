@@ -1,6 +1,5 @@
 # Jessica Franco
 
-- http://jessicafranco.co
 - http://jessicafranco.co/aau/wnm608/franco.jessica/index.php
 - http://jessicafranco.co/aau/wnm608/franco.jessica/styleguide/
 - http://jessicafranco.co/aau/wnm608/franco.jessica/admin/index.php
