@@ -1,13 +1,13 @@
 # Jessica Franco
 
-- https://jessicafranco.co
-- https://jessicafranco.co/aau/wnm608/franco.jessica/index.php
-- https://jessicafranco.co/aau/wnm608/franco.jessica/styleguide
-- https://jessicafranco.co/aau/wnm608/franco.jessica/admin/index.php
+- http://jessicafranco.co
+- http://jessicafranco.co/aau/wnm608/franco.jessica/index.php
+- http://jessicafranco.co/aau/wnm608/franco.jessica/styleguide
+- http://jessicafranco.co/aau/wnm608/franco.jessica/admin/index.php
 
 
 Extra Links
 
-- https://jessicafranco.co/aau/wnm608/franco.jessica/admin/users.php
-- https://jessicafranco.co/aau/wnm608/franco.jessica/notes
-- https://jessicafranco.co/aau/wnm608/franco.jessica/notes/reading_data.php
+- http://jessicafranco.co/aau/wnm608/franco.jessica/admin/users.php
+- http://jessicafranco.co/aau/wnm608/franco.jessica/notes
+- http://jessicafranco.co/aau/wnm608/franco.jessica/notes/reading_data.php
